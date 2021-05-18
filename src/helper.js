@@ -1,15 +1,77 @@
-/*
- * @Author: Liu Xiaodong
- * @Date: 2021-01-20 10:42:40
- * @LastEditTime: 2021-01-20 10:56:03
- * @Description: 辅助工具
- */
-
 const commander = require('commander');
-const br = "\r\n";
-exports.printHelp = function() {
+const inquirer = require('inquirer');
+const chalk = require('chalk');
+
+// 添加命令
+function addCommand(param = {
+  cmd: "",
+  alias: "",
+  desc: "",
+  action,
+}) {
+
+  let {
+    cmd = '',
+      alias = '',
+      desc = '',
+      action,
+  } = param;
+
+  let tempCommander = commander.command(cmd).alias(alias).description(desc);
+
+  let type = toString.call(action);
+  switch (type) {
+    case "[object Function]":
+      tempCommander.action(action);
+      break;
+    case "[object Array]":
+      for (let item of action) {
+        tempCommander.option(...item.option);
+        tempCommander.action(item.action);
+      }
+      break;
+    default:
+      break;
+  }
+}
+
+// 打印帮助信息
+function printHelp() {
   commander.help((info) => {
-    console.log(info);
-    return `目前该微信小程序脚手架不断完善中，如果觉得不错，欢迎到Github加个星吧。${br}`;
+    console.info(info);
+    return "请根据以上提供的的选项或命令使用工具。\r\n";
   });
+}
+
+// Promise化
+function promptPromise(question) {
+
+  return new Promise((resolve, reject) => {
+    inquirer.prompt(question).then((res) => {
+      resolve({
+        state: 'success',
+        data: res
+      });
+    }).catch(err => {
+      resolve({
+        state: 'error',
+        err,
+      });
+    });
+  })
+
+}
+
+function handleException(err) {
+
+  // console.log(err);
+  console.log(chalk.red.bold('程序出现异常，请重新执行'));
+  process.exit(1);
+}
+
+module.exports = {
+  addCommand,
+  printHelp,
+  promptPromise,
+  handleException,
 }
