@@ -1,0 +1,18 @@
+{
+  "name": "pj-cli",
+  "version": "1.0.0",
+  "description": "一个用于快速引用项目模板的脚手架，快速开发",
+  "bin": {
+    "pj-cli": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "mudong",
+  "license": "ISC",
+  "devDependencies": {
+    "commander": "^7.0.0",
+    "inquirer": "^7.3.3"
+  }
+}
