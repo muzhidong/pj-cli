@@ -1,6 +1,9 @@
 const commander = require('commander');
 const inquirer = require('inquirer');
 const chalk = require('chalk');
+const {
+  exec,
+} = require('child_process');
 
 // 添加命令
 function addCommand(param = {
@@ -62,6 +65,7 @@ function promptPromise(question) {
 
 }
 
+// 错误统一处理
 function handleException(err) {
 
   // console.log(err);
@@ -69,9 +73,25 @@ function handleException(err) {
   process.exit(1);
 }
 
+// 执行命令
+function execCmd(cmd, successCb, errorCb) {
+  exec(cmd, function(error, stdout, stderr) {
+    if (error) {
+      if (errorCb) {
+        errorCb();
+      } else {
+        handleException(error);
+      }
+    } else {
+      successCb && successCb();
+    }
+  });
+}
+
 module.exports = {
   addCommand,
   printHelp,
   promptPromise,
   handleException,
+  execCmd,
 }
