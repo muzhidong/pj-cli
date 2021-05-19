@@ -1,41 +1,27 @@
-## pj-cli
+# pj-cli
 
-一个收集了各种常用项目模板的脚手架，以便快速搭建、开发。
+## 功能
+- 提供常见场景的项目模板，以便快速选择使用；
+- 支持项目模板的收集和维护；
 
-### 现提供以下项目模板选择
+## 命令
+- select
 
-#### MVVM
-- Vue
-- React
-- Angular
+  选择项目模板
 
-#### 集成
-- dva
-- umi
+- ls
 
-#### SSR
-- nuxt
-- next
+  列举当前已有的所有项目模板信息
 
-#### 后端
-- express：多用于中小型项目或中间层开发
-- koa
-- egg(模板引擎，nunjucks\ejs\jade)
-- nest
-  
-#### 中台
-- ant-design-pro
+- add
 
-####  博客
-- vue-press
-- hexo
+  添加项目模板
 
-#### 跨端
-- RN
-- Weex
-- Electron
+- del
 
-### 后续不断补充
-- Vue技术栈自定义：ElementUI + (less / sass) + (js / ts)+ vue + vue-router + vuex + (axios / fetch) + webpack
-- React技术栈自定义：AntDesign + (less / sass) + (js / ts)+ react + react-router + (redux + redux-saga / mobx) + (axios / fetch) + webpack
-- PWA
+  删除某一项目模板
+
+- up
+
+  更新项目模板或组件
+
