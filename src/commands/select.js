@@ -111,7 +111,7 @@ async function handleSelectAction() {
 
 module.exports = {
   cmd: "select",
-  desc: "选择项目模板",
+  desc: "选择项目模板并安装",
   action: function() {
     handleSelectAction();
   },
