@@ -12,8 +12,12 @@
   "author": "mudong",
   "license": "ISC",
   "devDependencies": {
+    "cli-table3": "^0.6.0",
     "commander": "^7.0.0",
+    "download-git-repo": "^3.0.2",
     "inquirer": "^7.3.3",
-    "inquirer-autocomplete-prompt": "^1.3.0"
+    "inquirer-autocomplete-prompt": "^1.3.0",
+    "nedb": "^1.8.0",
+    "ora": "^5.4.0"
   }
 }
