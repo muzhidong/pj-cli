@@ -88,10 +88,16 @@ function execCmd(cmd, successCb, errorCb) {
   });
 }
 
+// 警醒
+function warn(content) {
+  console.log(chalk.hex('#ffa500').bold(content));
+}
+
 module.exports = {
   addCommand,
   printHelp,
   promptPromise,
   handleException,
   execCmd,
+  warn,
 }
