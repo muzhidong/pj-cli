@@ -47,7 +47,7 @@ async function insertScene(name) {
   }
 }
 
-async function queryScene() {
+async function queryScene(opType) {
 
   let res = await openDB.query({
     "type": {
@@ -58,6 +58,9 @@ async function queryScene() {
   if (res.state === 'success') {
 
     sceneList = res.data;
+
+    if (opType === 1) return;
+
     selectScene.pageSize = sceneList.length;
     selectScene.source = function(answersSoFar, input) {
       let scenes = sceneList.map(item => item.name).filter(item => item.search(input) > -1);
@@ -76,17 +79,16 @@ async function handleAddAction() {
 
     let val = res.data.sceneOpType;
     // 1表示新增，2表示选择已有
-    let opType = val === '新增' ? 1 : 2;
+    let opType = val ? 2 : 1;
+
+    if (opType === 2) {
+      inquirer.registerPrompt('autocomplete', autocomplete);
+    }
 
     let questions = opType === 1 ? [addScene] : [selectScene];
     questions = questions.concat([addTplName, addTplDesc, addInstall, addPreInstall]);
 
-    if (opType === 2) {
-
-      inquirer.registerPrompt('autocomplete', autocomplete);
-
-      await queryScene();
-    }
+    await queryScene(opType);
 
     res = await promptPromise(questions);
     if (res.state === 'success') {

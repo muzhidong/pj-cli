@@ -20,10 +20,10 @@ const selectTpl = {
 
 // 场景操作
 const operateScene = {
-  type: 'checkbox',
+  type: 'confirm',
   name: 'sceneOpType',
-  message: '场景是新增还是选择已有？',
-  choices: ['新增', '去选择'],
+  message: '场景是选择已有？',
+  default: true,
 }
 
 // 新增场景
