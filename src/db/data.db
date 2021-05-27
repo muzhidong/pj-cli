@@ -1,29 +1,29 @@
-{"sceneType":2,"name":"Dva","desc":"","install":"","preInstall":"","_id":"11yL0O4Vj50Iwkek"}
+{"sceneType":2,"name":"Dva","desc":"一个轻量级的应用框架，集成redux、redux-saga、react-router和fetch。","install":"dva new dva-app","preInstall":"npm install dva-cli -g","_id":"11yL0O4Vj50Iwkek"}
 {"type":4,"name":"中台应用","_id":"3octhirjLX1R7za0"}
-{"sceneType":4,"name":"AntDesignPro","desc":"","install":"","preInstall":"","_id":"5mh03QaCxvufdE4M"}
-{"sceneType":1,"name":"Angular","desc":"","install":"","preInstall":"","_id":"9H25Dv9cRie0R91a"}
+{"sceneType":4,"name":"AntDesignPro","desc":"开箱即用的中台前端/设计解决方案","install":"npm create umi","preInstall":"","_id":"5mh03QaCxvufdE4M"}
+{"sceneType":1,"name":"Angular","desc":"an application design framework and development platform for creating efficient and sophisticated single-page apps","install":"ng new ng-app","preInstall":"npm install -g @angular/cli","_id":"9H25Dv9cRie0R91a"}
 {"sceneType":1,"name":"React技术栈","desc":"AntDesign + Less + React + ReactRouter + Redux + ReduxSaga +  Fetch + Webpack","install":"","preInstall":"","_id":"AqwCUGWo5vzQkdmN"}
 {"type":5,"name":"博客网站应用","_id":"BwBUMLgkOXci7Pwb"}
-{"sceneType":6,"name":"Egg","desc":"企业级开发框架","install":"","preInstall":"","_id":"CCGWepv5eEXx1eOE"}
+{"sceneType":6,"name":"Egg","desc":"为企业级框架和应用而生","install":"mkdir egg-app && cd egg-app && npm init egg --type=simple","preInstall":"","_id":"CCGWepv5eEXx1eOE"}
 {"sceneType":1,"name":"Vue技术栈","desc":"ElementUI + Sass + Vue + VueRouter + Vuex + Axios  + Webpack","install":"","preInstall":"","_id":"DlTh7bcfaibZbE98"}
 {"type":6,"name":"服务侧应用","_id":"GreEJYk0ErVXxQt1"}
-{"sceneType":6,"name":"Express","desc":"一般用于中小型项目服务端开发或者中间层开发","install":"","preInstall":"","_id":"I0SEpZJISzn2Avx4"}
-{"sceneType":6,"name":"Nest","desc":"","install":"","preInstall":"","_id":"JHlEXKxqV4UzO7xn"}
-{"sceneType":8,"name":"Electron","desc":"","install":"","preInstall":"","_id":"KAz1UZJLaGMNy690"}
-{"sceneType":3,"name":"Nuxt","desc":"","install":"","preInstall":"","_id":"Kd6FYdFCX6LG8n2h"}
-{"sceneType":1,"name":"Vue","desc":"","install":"","preInstall":"","_id":"ME42NyzgssMLibA9"}
-{"sceneType":6,"name":"Koa","desc":"Express替代版","install":"","preInstall":"","_id":"O8F5nbSJpgkVhNpi"}
-{"sceneType":5,"name":"Hexo","desc":"","install":"","preInstall":"","_id":"TPbIi6T76mv6QubL"}
+{"sceneType":6,"name":"Express","desc":"Fast, unopinionated, minimalist web framework for Node.js","install":"express express-app","preInstall":"npm install -g express-generator","_id":"I0SEpZJISzn2Avx4"}
+{"sceneType":6,"name":"Nest","desc":"a framework for building efficient, scalable Node.js server-side applications","install":"nest new nest-app","preInstall":"npm i -g @nestjs/cli","_id":"JHlEXKxqV4UzO7xn"}
+{"sceneType":8,"name":"Electron","desc":"使用 JavaScript，HTML 和 CSS 构建跨平台的桌面应用程序","install":"mkdir electron-app && cd electron-app && npm init -y && npm i -D electron","preInstall":"","_id":"KAz1UZJLaGMNy690"}
+{"sceneType":3,"name":"Nuxt","desc":"易于使用的Vue 框架","install":"npm init nuxt-app nuxt-app","preInstall":"","_id":"Kd6FYdFCX6LG8n2h"}
+{"sceneType":1,"name":"Vue","desc":"a progressive framework for building user interfaces","install":"npm init @vitejs/app || (mkdir vite-app && cd vite-app && create-vite-app)","preInstall":"","_id":"ME42NyzgssMLibA9"}
+{"sceneType":6,"name":"Koa","desc":"next generation web framework for node.js","install":"mkdir koa-app && cd koa-app && npm init -y && npm i -S koa","preInstall":"","_id":"O8F5nbSJpgkVhNpi"}
+{"sceneType":5,"name":"Hexo","desc":"快速、简洁且高效的博客框架","install":"hexo init hexo-app","preInstall":"npm install -g hexo-cli","_id":"TPbIi6T76mv6QubL"}
 {"type":1,"name":"MVVM应用","_id":"UFWqvWp7eorDVFgR"}
 {"sceneType":7,"name":"PWA","desc":"","install":"","preInstall":"","_id":"Z43WmGs2npxklhep"}
-{"sceneType":7,"name":"ReactNative","desc":"","install":"","preInstall":"","_id":"ZWiZyREjLcpVGMp9"}
-{"sceneType":3,"name":"Next","desc":"","install":"","preInstall":"","_id":"fAQI1nopaivO5iyV"}
-{"sceneType":1,"name":"React","desc":"","install":"","preInstall":"","_id":"hkcdKQGXvwzbe4MN"}
+{"sceneType":7,"name":"ReactNative","desc":"Learn once, write anywhere.","install":"npx react-native init rn-app","preInstall":"","_id":"ZWiZyREjLcpVGMp9"}
+{"sceneType":3,"name":"Next","desc":"The React Framework for Production.Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed.","install":"npx create-next-app || npx create-next-app --typescript","preInstall":"","_id":"fAQI1nopaivO5iyV"}
+{"sceneType":1,"name":"React","desc":"a JavaScript library for building user interfaces","install":"npx create-react-app react-app","preInstall":"","_id":"hkcdKQGXvwzbe4MN"}
 {"type":7,"name":"移动侧APP","_id":"jUjfNrUT8IE0RPZc"}
 {"type":3,"name":"SSR应用","_id":"jrd7gsJzgoffZoqH"}
 {"type":2,"name":"集成客户端应用","_id":"jtWZKkpH28c5YrJR"}
 {"type":8,"name":"PC侧APP","_id":"lQJP1MnV2W0WRoGI"}
-{"sceneType":7,"name":"Weex","desc":"","install":"","preInstall":"","_id":"qqQmjo9hEB4ybZjp"}
+{"sceneType":7,"name":"Weex","desc":"一个可以使用现代化的 Web 技术开发高性能原生应用的框架","install":"weex create weex-app","preInstall":"npm install weex-toolkit -g","_id":"qqQmjo9hEB4ybZjp"}
 {"config":"init","value":1,"_id":"uINJlZ3yOLq4lDbX"}
-{"sceneType":2,"name":"Umi","desc":"","install":"","preInstall":"","_id":"v6XDmPxNjy1WPGyA"}
-{"sceneType":5,"name":"VuePress","desc":"","install":"","preInstall":"","_id":"wbKkPgoU3mogmzj3"}
+{"sceneType":2,"name":"Umi","desc":"a scalable enterprise-class front-end application framework","install":"mkdir umi-app && cd umi-app && npx @umijs/create-umi-app","preInstall":"","_id":"v6XDmPxNjy1WPGyA"}
+{"sceneType":5,"name":"VuePress","desc":"Vue 驱动的静态网站生成器","install":"mkdir vuepress-app && cd vuepress-app && npm init -y && npm install -D vuepress","preInstall":"","_id":"wbKkPgoU3mogmzj3"}
