@@ -16,7 +16,7 @@
 {"sceneType":5,"name":"Hexo","desc":"快速、简洁且高效的博客框架","install":"hexo init hexo-app","preInstall":"npm install -g hexo-cli","_id":"TPbIi6T76mv6QubL"}
 {"type":1,"name":"MVVM应用","_id":"UFWqvWp7eorDVFgR"}
 {"sceneType":7,"name":"PWA","desc":"","install":"","preInstall":"","_id":"Z43WmGs2npxklhep"}
-{"sceneType":7,"name":"ReactNative","desc":"Learn once, write anywhere.","install":"npx react-native init rn-app","preInstall":"","_id":"ZWiZyREjLcpVGMp9"}
+{"sceneType":7,"name":"ReactNative","desc":"Learn once, write anywhere.","install":"npx react-native init RNApp","preInstall":"","_id":"ZWiZyREjLcpVGMp9"}
 {"sceneType":3,"name":"Next","desc":"The React Framework for Production.Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed.","install":"npx create-next-app || npx create-next-app --typescript","preInstall":"","_id":"fAQI1nopaivO5iyV"}
 {"sceneType":1,"name":"React","desc":"a JavaScript library for building user interfaces","install":"npx create-react-app react-app","preInstall":"","_id":"hkcdKQGXvwzbe4MN"}
 {"type":7,"name":"移动侧APP","_id":"jUjfNrUT8IE0RPZc"}
