@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const autocomplete = require('inquirer-autocomplete-prompt');
 const ora = require('ora');
+const chalk = require('chalk');
 
 const {
   promptPromise,
@@ -32,7 +33,7 @@ function setUpTpl(tpl) {
     execCmd(`${result.install}`, function() {
       spinner.succeed('安装成功');
     }, function() {
-      spinner.fail(`安装失败。请先执行该命令，安装必要的脚手架：${chalk.yellow.bold(`${result.preInstall}`)}`);
+      spinner.fail(`安装失败。请先执行该命令，安装必要的脚手架：${chalk.yellow.bold(`${result.preInstall}`)} 或检查是否有重名的文件夹`);
     })
   } else {
     spinner.fail(`安装失败。尚未配置安装命令。`);
