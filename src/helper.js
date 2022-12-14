@@ -13,24 +13,23 @@ function addCommand(param = {
   action,
 }) {
 
-  let {
+  const {
     cmd = '',
-      alias = '',
-      desc = '',
-      action,
+    alias = '',
+    desc = '',
+    action,
   } = param;
+  const commanderRef = commander.command(cmd).alias(alias).description(desc);
 
-  let tempCommander = commander.command(cmd).alias(alias).description(desc);
-
-  let type = toString.call(action);
+  const type = toString.call(action);
   switch (type) {
     case "[object Function]":
-      tempCommander.action(action);
+      commanderRef.action(action);
       break;
     case "[object Array]":
       for (let item of action) {
-        tempCommander.option(...item.option);
-        tempCommander.action(item.action);
+        commanderRef.option(...item.option);
+        commanderRef.action(item.action);
       }
       break;
     default:
