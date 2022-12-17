@@ -37,6 +37,7 @@ async function handleQueryAction() {
   let table = new Table({
     head: ['应用场景', '技术栈', '描述', '安装操作或下载链接', '预安装操作'],
     colWidths: [20, 20, 45, 45, 40],
+    wordWrap: true,
   });
 
   let arr = tplList.map(item => {
