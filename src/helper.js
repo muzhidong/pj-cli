@@ -2,7 +2,7 @@ const commander = require('commander');
 const inquirer = require('inquirer');
 const chalk = require('chalk');
 const {
-  spawnSync,
+  execSync,
 } = require('child_process');
 
 // 添加命令
@@ -66,21 +66,16 @@ function promptPromise(question) {
 
 // 错误统一处理
 function handleException(err) {
-
-  // console.log(err);
   console.log(chalk.red.bold('程序出现异常，请重新执行'));
   process.exit(1);
 }
 
 // 执行命令
 function execCmd(cmd, successCb, errorCb) {
-  const [command, ...args] = cmd.split(' ');
   try {
-    spawnSync(command, [...args], {
-      stdio: 'inherit'
-    });
+    execSync(cmd, { stdio: 'inherit'});
     successCb && successCb();
-  } catch(error) {
+  } catch (error) {
     if (errorCb) {
       errorCb();
     } else {
