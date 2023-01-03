@@ -1,0 +1,30 @@
+diff --git a/node_modules/cli-table3/src/cell.js b/node_modules/cli-table3/src/cell.js
+index 8c3df35..9f4aa8b 100644
+--- a/node_modules/cli-table3/src/cell.js
++++ b/node_modules/cli-table3/src/cell.js
+@@ -116,7 +116,8 @@ class Cell {
+     this.width = this.widths.reduce(sumPlusOne, -1);
+     this.height = this.heights.reduce(sumPlusOne, -1);
+ 
+-    this.hAlign = this.options.hAlign || tableOptions.colAligns[x];
++    const { rowIndex, headHAlign = ''} = tableOptions;
++    this.hAlign = this.options.hAlign || tableOptions.colAligns[x] || rowIndex === 0 && headHAlign;
+     this.vAlign = this.options.vAlign || tableOptions.rowAligns[y];
+ 
+     this.drawRight = x + this.colSpan == tableOptions.colWidths.length;
+diff --git a/node_modules/cli-table3/src/table.js b/node_modules/cli-table3/src/table.js
+index eb4a9bd..15aef32 100644
+--- a/node_modules/cli-table3/src/table.js
++++ b/node_modules/cli-table3/src/table.js
+@@ -58,9 +58,9 @@ class Table extends Array {
+     tableLayout.computeWidths(this.options.colWidths, cells);
+     tableLayout.computeHeights(this.options.rowHeights, cells);
+ 
+-    cells.forEach(function (row) {
++    cells.forEach(function (row, rowIndex) {
+       row.forEach(function (cell) {
+-        cell.init(this.options);
++        cell.init({...this.options, rowIndex});
+       }, this);
+     }, this);
+ 
