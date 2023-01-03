@@ -2,7 +2,7 @@ const commander = require('commander');
 const inquirer = require('inquirer');
 const chalk = require('chalk');
 const {
-  exec,
+  spawnSync,
 } = require('child_process');
 
 // 添加命令
@@ -74,17 +74,19 @@ function handleException(err) {
 
 // 执行命令
 function execCmd(cmd, successCb, errorCb) {
-  exec(cmd, function(error, stdout, stderr) {
-    if (error) {
-      if (errorCb) {
-        errorCb();
-      } else {
-        handleException(error);
-      }
+  const [command, ...args] = cmd.split(' ');
+  try {
+    spawnSync(command, [...args], {
+      stdio: 'inherit'
+    });
+    successCb && successCb();
+  } catch(error) {
+    if (errorCb) {
+      errorCb();
     } else {
-      successCb && successCb();
+      handleException(error);
     }
-  });
+  }
 }
 
 // 警醒

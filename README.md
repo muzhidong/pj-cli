@@ -27,8 +27,6 @@
 
 ## FIXME|TODO
 
-- 子进程方式执行脚手架命令，无法按正常执行脚手架命令操作。
-
 - 部分项目模板待配置，如React、Vue、VuePress、Koa、PWA、Electron
 
 - npm发布
