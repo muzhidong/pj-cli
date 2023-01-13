@@ -9,6 +9,7 @@
     "postinstall": "patch-package",
     "patch": "patch-package",
     "link": "npm link",
+    "unlink": "npm uninstall -g mpj-cli",
     "whoami": "npm whoami",
     "login": "npm login",
     "check": "npm run whoami || npm login",
@@ -26,7 +27,7 @@
   "author": "muzhidong <be_your_best@163.com>",
   "license": "ISC",
   "repository": "https://github.com/muzhidong/pj-cli",
-  "devDependencies": {
+  "dependencies": {
     "cli-table3": "^0.6.0",
     "commander": "^7.0.0",
     "inquirer": "^7.3.3",
