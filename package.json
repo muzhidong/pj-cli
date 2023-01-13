@@ -5,6 +5,7 @@
   "bin": {
     "mpj-cli": "./bin/index.js"
   },
+  "main": "./bin/index.js",
   "scripts": {
     "postinstall": "patch-package",
     "patch": "patch-package",
