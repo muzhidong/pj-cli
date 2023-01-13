@@ -25,6 +25,7 @@
   ],
   "author": "muzhidong <be_your_best@163.com>",
   "license": "ISC",
+  "repository": "https://github.com/muzhidong/pj-cli",
   "devDependencies": {
     "cli-table3": "^0.6.0",
     "commander": "^7.0.0",
