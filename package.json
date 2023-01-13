@@ -1,17 +1,26 @@
 {
-  "name": "pj-cli",
+  "name": "mpj-cli",
   "version": "1.0.0",
-  "description": "一个用于快速引用项目模板的脚手架，快速开发",
+  "description": "收集和管理项目模板的一个脚手架，方便快速引用",
   "bin": {
-    "pj-cli": "./bin/index.js"
+    "mpj-cli": "./bin/index.js"
   },
   "scripts": {
-    "link": "npm link",
     "postinstall": "patch-package",
-    "patch": "patch-package"
+    "patch": "patch-package",
+    "link": "npm link",
+    "whoami": "npm whoami",
+    "login": "npm login",
+    "check": "npm run whoami || npm login",
+    "prepublish": "npm config delete registry",
+    "publish": "npm run check && npm publish",
+    "postpublish": "npm config set registry=https://registry.npm.taobao.org",
+    "publish:patch": "npm version patch && npm run publish",
+    "publish:minor": "npm version minor && npm run publish",
+    "publish:major": "npm version major && npm run publish"
   },
-  "keywords": [],
-  "author": "mudong",
+  "keywords": ["cli", "project template"],
+  "author": "muzhidong <be_your_best@163.com>",
   "license": "ISC",
   "devDependencies": {
     "cli-table3": "^0.6.0",
