@@ -25,8 +25,5 @@
 
   更改项目模板信息
 
-## FIXME|TODO
-
-- 部分项目模板待配置，如React、Vue、VuePress、Koa、PWA、Electron
-
-- npm发布
+## TODO
+- 补充通用项目模板，如VuePress博客项目、React技术栈模板、Vue技术栈模板、PWA项目模板、Koa项目模板。
