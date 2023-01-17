@@ -1,4 +1,4 @@
-const DataBase = require('nedb');
+const DataBase = require('../libs/nedb');
 
 const {
   scene,
