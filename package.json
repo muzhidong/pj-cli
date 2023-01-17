@@ -5,12 +5,12 @@
   "bin": {
     "mpj-cli": "./bin/index.js"
   },
-  "main": "./bin/index.js",
   "scripts": {
     "postinstall": "patch-package",
     "patch": "patch-package",
     "link": "npm link",
     "unlink": "npm uninstall -g mpj-cli",
+    "audit": "npm audit",
     "whoami": "npm whoami",
     "login": "npm login",
     "check": "npm run whoami || npm login",
@@ -33,8 +33,13 @@
     "commander": "^7.0.0",
     "inquirer": "^7.3.3",
     "inquirer-autocomplete-prompt": "^1.3.0",
-    "nedb": "^1.8.0",
     "ora": "^5.4.0",
-    "patch-package": "^6.5.0"
+    "patch-package": "^6.5.0",
+    "underscore": "^1.13.0",
+    "async": "0.2.10",
+    "mkdirp": "~0.5.1"
+  },
+  "engines": {
+    "npm": "～9.3.0"
   }
 }
