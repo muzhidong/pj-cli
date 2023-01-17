@@ -1,6 +1,6 @@
 {
   "name": "mpj-cli",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "收集和管理项目模板的一个脚手架，方便快速引用",
   "bin": {
     "mpj-cli": "./bin/index.js"
