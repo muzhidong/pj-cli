@@ -10,11 +10,13 @@
 {"sceneType":8,"name":"Electron","desc":"使用 JavaScript，HTML 和 CSS 构建跨平台的桌面应用程序","install":"npm init electron-app@latest electron-app --template=webpack","preInstall":"","_id":"KAz1UZJLaGMNy690"}
 {"sceneType":3,"name":"Nuxt","desc":"易于使用的Vue 框架","install":"npx nuxi init nuxt-app || npx create-nuxt-app nuxt-app","preInstall":"","_id":"Kd6FYdFCX6LG8n2h"}
 {"sceneType":1,"name":"Vue","desc":"a progressive framework for building user interfaces","install":"npx create-vue@latest","preInstall":"","_id":"ME42NyzgssMLibA9"}
+{"sceneType":9,"name":"原生微信小程序(1)","desc":"提供模块引入统一入口，支持使用Sass编写样式，支持开发环境一键切换，提供常用behaviors、正则、工具，提供代码分析、图片压缩命令","install":"git clone -b tpl-miniapp-sass https://github.com/muzhidong/pj-templates.git","preInstall":"","_id":"N5MsWQJ04uXgy0ds"}
 {"sceneType":9,"name":"uni","desc":"一个使用 Vue.js 开发所有前端应用的框架，开发者编写一套代码，可发布到iOS、Android、Web（响应式）、以及各种小程序（微信 / 支付宝 / 百度 / 头条 / QQ / 快手 / 钉钉 / 淘宝）、快应用等多个平台","install":"vue create -p dcloudio/uni-preset-vue uni-app","preInstall":"npm install -g @vue/cli","_id":"NryBvg9OJsxyVM9e"}
 {"sceneType":6,"name":"Koa","desc":"next generation web framework for node.js","install":"","preInstall":"","_id":"O8F5nbSJpgkVhNpi"}
 {"sceneType":5,"name":"Hexo","desc":"快速、简洁且高效的博客框架","install":"hexo init hexo-app","preInstall":"npm install -g hexo-cli","_id":"TPbIi6T76mv6QubL"}
 {"type":1,"name":"MVVM应用","_id":"UFWqvWp7eorDVFgR"}
 {"sceneType":7,"name":"Cordova","desc":"使用HTML, CSS & JS进行移动App开发","install":"cordova create cordova-app","preInstall":"npm install -g cordova","_id":"WWPGR3CmveEmt3De"}
+{"sceneType":9,"name":"原生微信小程序(2)","desc":"提供分包，提供模块引入统一入口，支持使用Sass编写样式，支持开发环境一键切换，提供常用behaviors、正则、工具，提供代码分析、图片压缩命令","install":"git clone -b tpl-miniapp-subpackage-sass https://github.com/muzhidong/pj-templates.git","preInstall":"","_id":"ZMWkwx04sh5rkulT"}
 {"type":9,"name":"小程序侧","_id":"ZNk9iXN7pE5EPYla"}
 {"sceneType":7,"name":"ReactNative","desc":"Learn once, write anywhere.","install":"npm uninstall -g react-native-cli @react-native-community/cli && npx react-native init RNApp","preInstall":"","_id":"ZWiZyREjLcpVGMp9"}
 {"sceneType":3,"name":"Next","desc":"The React Framework for Production.Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed.","install":"npx create-next-app@latest || npx create-next-app@latest --typescript","preInstall":"","_id":"fAQI1nopaivO5iyV"}
