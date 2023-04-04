@@ -42,4 +42,15 @@ yarn global add mpj-cli
 <!-- 
 ## TODO
 - 后续补充通用项目模板，如VuePress博客项目、React技术栈模板、Vue技术栈模板、PWA项目模板、Koa项目模板。 
+
+## 问题
+发布包避免使用`postinstall`钩子，对于`yarn`安装不友好。因为`yarn`会对已安装的包存档缓存，减少安装大小，而`postinstall`会破坏这一规则，告知`yarn`这些包可能改变目录，迫使它们放到磁盘物理位置，导致安装更重更慢，不稳定。
+```json
+"scripts": {
+  // 同步修改的依赖
+  "postinstall": "patch-package",
+  // 生成依赖修改的增量文件
+  "patch": "patch-package"
+}
+```
 -->
