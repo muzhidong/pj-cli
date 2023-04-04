@@ -6,8 +6,6 @@
     "mpj-cli": "./bin/index.js"
   },
   "scripts": {
-    "postinstall": "patch-package",
-    "patch": "patch-package",
     "link": "npm link",
     "unlink": "npm uninstall -g mpj-cli",
     "audit": "npm audit",
@@ -36,7 +34,6 @@
     "inquirer-autocomplete-prompt": "^1.3.0",
     "mkdirp": "~0.5.1",
     "ora": "^5.4.0",
-    "patch-package": "^6.5.0",
     "underscore": "^1.13.0"
   },
   "engines": {
