@@ -1,5 +1,5 @@
 const chalk = require('chalk');
-const Table = require('cli-table3');
+const Table = require('../libs/cli-table3');
 
 const {
   handleException,
