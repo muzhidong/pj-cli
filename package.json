@@ -13,12 +13,12 @@
     "whoami": "npm whoami",
     "login": "npm login",
     "check": "npm run whoami || npm login",
-    "prepublish": "npm config delete registry",
-    "publish": "npm run check && npm publish",
-    "postpublish": "npm config set registry=https://registry.npm.taobao.org",
-    "publish:patch": "npm version patch && npm run publish",
-    "publish:minor": "npm version minor && npm run publish",
-    "publish:major": "npm version major && npm run publish"
+    "preph": "npm config delete registry",
+    "ph": "npm run check && npm publish",
+    "postph": "npm config set registry=https://registry.npm.taobao.org",
+    "publish:patch": "npm version patch && npm run ph",
+    "publish:minor": "npm version minor && npm run ph",
+    "publish:major": "npm version major && npm run ph"
   },
   "keywords": [
     "cli",
@@ -26,7 +26,9 @@
   ],
   "author": "muzhidong <be_your_best@163.com>",
   "license": "ISC",
-  "repository": "https://github.com/muzhidong/pj-cli",
+  "repository": {
+    "url": "git+https://github.com/muzhidong/pj-cli.git"
+  },
   "dependencies": {
     "@colors/colors": "^1.5.0",
     "async": "0.2.10",
