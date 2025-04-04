@@ -6,6 +6,7 @@
     "mpj-cli": "./bin/index.js"
   },
   "scripts": {
+    "trace": "node --trace-deprecation ./bin/index.js",
     "link": "npm link",
     "unlink": "npm uninstall -g mpj-cli",
     "audit": "npm audit",
