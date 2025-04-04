@@ -268,7 +268,7 @@ Datastore.prototype.getCandidates = function (query, dontExpireStaleDocs, callba
     // For a basic match
     usableQueryKeys = [];
     Object.keys(query).forEach(function (k) {
-      if (typeof query[k] === 'string' || typeof query[k] === 'number' || typeof query[k] === 'boolean' || util.isDate(query[k]) || query[k] === null) {
+      if (typeof query[k] === 'string' || typeof query[k] === 'number' || typeof query[k] === 'boolean' || (query[k] instanceof Date) || query[k] === null) {
         usableQueryKeys.push(k);
       }
     });
@@ -313,7 +313,7 @@ Datastore.prototype.getCandidates = function (query, dontExpireStaleDocs, callba
     docs.forEach(function (doc) {
       var valid = true;
       ttlIndexesFieldNames.forEach(function (i) {
-        if (doc[i] !== undefined && util.isDate(doc[i]) && Date.now() > doc[i].getTime() + self.ttlIndexes[i] * 1000) {
+        if (doc[i] !== undefined && (doc[i] instanceof Date) && Date.now() > doc[i].getTime() + self.ttlIndexes[i] * 1000) {
           valid = false;
         }
       });
@@ -350,7 +350,7 @@ Datastore.prototype._insert = function (newDoc, cb) {
     return callback(e);
   }
 
-  this.persistence.persistNewState(util.isArray(preparedDoc) ? preparedDoc : [preparedDoc], function (err) {
+  this.persistence.persistNewState(Array.isArray(preparedDoc) ? preparedDoc : [preparedDoc], function (err) {
     if (err) { return callback(err); }
     return callback(null, model.deepCopy(preparedDoc));
   });
@@ -376,7 +376,7 @@ Datastore.prototype.createNewId = function () {
 Datastore.prototype.prepareDocumentForInsertion = function (newDoc) {
   var preparedDoc, self = this;
 
-  if (util.isArray(newDoc)) {
+  if (Array.isArray(newDoc)) {
     preparedDoc = [];
     newDoc.forEach(function (doc) { preparedDoc.push(self.prepareDocumentForInsertion(doc)); });
   } else {
@@ -396,7 +396,7 @@ Datastore.prototype.prepareDocumentForInsertion = function (newDoc) {
  * @api private
  */
 Datastore.prototype._insertInCache = function (preparedDoc) {
-  if (util.isArray(preparedDoc)) {
+  if (Array.isArray(preparedDoc)) {
     this._insertMultipleDocsInCache(preparedDoc);
   } else {
     this.addToIndexes(preparedDoc);
