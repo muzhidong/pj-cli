@@ -56,7 +56,7 @@ function setUpTpl(tpl) {
       spinner.succeed('安装成功');
     }, function() {
       if(isClone){
-        spinner.fail(`下载模板失败。请检查是否有重名的文件夹`);
+        spinner.fail(`下载模板失败。可以先检查是否有重名文件夹`);
         return;
       }
       spinner.fail(`安装失败。请先执行该命令，安装必要的脚手架：${chalk.yellow.bold(`${result.preInstall}`)} 或检查是否有重名的文件夹`);
